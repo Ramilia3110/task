@@ -162,6 +162,7 @@ header.sticky ul li a {
   margin: 15px;
   cursor: pointer;
   display: none;
+  z-index: 200;
 }
 .menu div {
 width: 25px;
@@ -173,21 +174,27 @@ margin: 5px;
 
 
 @media (max-width:768px) {
-  #menu{
-    display: inline-block;
-    transition: .2s linear;
-  }
-  #menu.line {
-    transform: rotate(180deg);
-  }
+ 
   header ul.link {
     position: absolute;
+
+    top:20%;
+    right: 0;
+    left: 0;
     width: 100%;
+    height: 50vh;
+    line-height: 2rem;
     flex-direction: column;
+    padding: 5rem auto;
+    justify-content: center;
+    align-items: center;
     background-color: #ee6455;
-
+    display: none;
   }
-
+  header ul.link.active{
+display: block;
+  }
+  
 }
 
 
